@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: "Beaufort";
-    src: url("./assets/fonts/BEAUFORTFORLOL.TTF");
+    src: url("../fonts/BEAUFORTFORLOL.TTF");
 }
 
 * {
@@ -143,6 +143,7 @@ input::placeholder {
     text-align: center;
     font-weight: 400;
     color: #B58436;
+    font-family: "Beaufort";
     text-transform: uppercase;
 }
 
@@ -202,6 +203,22 @@ input::placeholder {
 
 .contact__header {
     padding-top: 0;
+}
+
+.form__log {
+    text-align: center;
+    padding: 10px 0 5px 0;
+    display: none;
+}
+
+.form__log .success {
+    color: green;
+    display: block !important;
+}
+
+.form__log .error {
+    color: red;
+    display: block !important;
 }
 
 .form__btn {

@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
     <link rel="stylesheet" href="./assets/styles/index.css" />
 
     <link
@@ -13,6 +12,52 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/images/favicon-16x16.png"
+    />
+    <meta
+      name="title"
+      content="Ananta Apartments - Pre-Selling Luxury Apartments in Mumbai"
+    />
+    <meta
+      name="description"
+      content="Discover luxurious living at Ananta Apartments in Mumbai. Pre-selling now! Modern amenities, prime location, and exclusive offers available."
+    />
+    <meta
+      name="keywords"
+      content="Ananta Apartments, Pre-Selling Apartments Mumbai, Luxury Apartments Mumbai, Mumbai Real Estate, Buy Apartments Mumbai, New Apartments Mumbai, Ananta Mumbai"
+    />
+    <title>Ananta Apartments - Pre-Selling Luxury Apartments in Mumbai</title>
+    <link
+      rel="preload"
+      href="./assets/images/fullLogo.svg"
+      as="preload ananta logo"
+    />
+    <meta
+      property="og:title"
+      content="Ananta Apartments - Pre-Selling Luxury Apartments in Mumbai"
+    />
+    <meta
+      property="og:description"
+      content="Discover luxurious living at Ananta Apartments in Mumbai. Pre-selling now! Modern amenities, prime location, and exclusive offers available."
+    />
+    <meta property="og:image" content="./assets/images/fullLogo.svg" />
+    <meta property="og:url" content="https://ananta.com" />
+    <meta property="og:type" content="website" />
   </head>
   <body>
     <nav class="navigation">
@@ -58,13 +103,13 @@
     <div class="about center">
       <div class="about__item">
         <div>
-          <h1 class="about__header">
+          <h1 class="about__header" data-aos="fade-up">
             Matunga's Unparalleled <br />
             Palatial Living
           </h1>
         </div>
         <div>
-          <p class="about__para">
+          <p class="about__para" data-aos="fade-up">
             Puje Ananta rises as a testament to timeless design and enduring
             legacy. It is a sanctuary where spaciousness meets functionality,
             where every detail is an expression of unparalleled aesthetics.
@@ -77,22 +122,48 @@
     <div class="contact center" id="contact">
       <div class="contact__item">
         <div class="">
-          <h1 class="contact__header">EXPRESS YOUR INTEREST</h1>
+          <h1 class="contact__header" data-aos="fade-up">
+            EXPRESS YOUR INTEREST
+          </h1>
         </div>
         <div class="">
-          <form action="" class="contact__form">
-            <input type="text" placeholder="NAME" required />
-            <input type="email" placeholder="EMAIL" required />
-            <input type="phone" placeholder="PHONE" required />
+          <p class="form__log">Message has sent successfully.</p>
+          <form action="" class="contact__form" data-aos="fade-up" id="form">
+            <input
+              type="text"
+              placeholder="NAME"
+              required
+              name="name"
+              id="name"
+            />
+            <input
+              type="email"
+              placeholder="EMAIL"
+              required
+              name="email"
+              id="email"
+            />
+            <input
+              type="phone"
+              placeholder="PHONE"
+              required
+              name="phone"
+              id="phone"
+            />
             <div class="form__btn center">
-              <button class="submit">SUBMIT</button>
+              <button class="submit" data-aos="fade-up">SUBMIT</button>
             </div>
           </form>
         </div>
       </div>
     </div>
     <footer class="footer center">
-      <img class="footer__img" src="./assets/images/pujeLogo.png" alt="" />
+      <img
+        class="footer__img"
+        data-aos="fade-up"
+        src="./assets/images/pujeLogo.png"
+        alt="Puje Group Image"
+      />
     </footer>
   </body>
   <script src="./assets/scripts/index.js"></script>

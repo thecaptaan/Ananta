@@ -2,12 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const deviceSize = window.innerWidth;
     const logoImg = document.getElementById("logo");
     const logo2Img = document.getElementById("logo2");
-    const bannerImg = document.getElementById("banner__img");
-    // if (deviceSize < 768) {
-    //     bannerImg.src = "./assets/images/smallBanner.png"
-    // } else {
-    //     bannerImg.src = "./assets/images/bigBanner.png"
-    // }
+    const form = document.getElementById("form");
     if (logoImg) {
         window.addEventListener('scroll', (e) => {
             if (window.scrollY > 100) {
@@ -19,14 +14,37 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         })
     }
-    window.addEventListener('resize', function (e) {
-        if (window.innerWidth < 768) {
-            bannerImg.src = "assets/images/smallBanner.png"
-        }
-        else {
-            bannerImg.src = "/assets/images/bigBanner.png"
-        }
+    form.addEventListener("submit", e => {
+        e.preventDefault()
+        const name = document.getElementById("name");
+        const email = document.getElementById("email");
+        const phone = document.getElementById("phone");
+        const formLog = document.querySelector('.form__log')
+        fetch('', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                name: name.value,
+                email: email.value,
+                phone: phone.value
+            })
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                formLog.classList.add('success');
+                formLog.innerHTML = "Message sent successfully"
+            })
+            .catch(error => {
+                formLog.classList.add('error');
+                formLog.innerHTML = "Error Occurred"
+            });
+
     })
     AOS.init();
+
 })
 
